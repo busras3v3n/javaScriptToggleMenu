@@ -1,0 +1,133 @@
+:root {
+    --color1: #fafafa;
+    --color2: #d4d4d4;
+    --color3: #1c1c1c;
+    --color4: #EE7214;
+    --color5: #242323;
+
+
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url(fonts/Roboto-Black.ttf);
+}
+
+
+
+body {
+    background-color: var(--color1);
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--color2);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+
+}
+
+.btn-toggle-nav {
+    width: 60px;
+    height: 100%;
+    background-color: var(--color4);
+    background-image: url(images/1507859.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.btn-toggle-nav:hover{
+    opacity: 0.7;
+
+}
+
+
+.nav-main ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    gap: 10px;
+    
+}
+
+.nav-main ul li{
+    list-style: none;
+    line-height: 60px;
+
+    
+}
+
+.nav-main ul li a{
+    display: block;
+    height: 100%;
+    padding: 0 20px;
+    text-transform: uppercase;
+    line-height: 60px;
+    color: var(--color5);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-main ul li a:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.nav-sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: calc(100vh - 60px);
+    padding: 0 0px;
+    background-color: var(--color3);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-sidebar ul{
+    padding-top: 15px;
+    overflow: hidden;
+    visibility: hidden;
+
+}
+
+.nav-sidebar ul li{
+    line-height: 60px;
+    list-style: none;
+
+}
+
+.nav-sidebar ul li span, .nav-sidebar ul li a{
+    display: block;
+    height: 60px;
+    padding: 0, 10px;
+    padding-left: 10px;
+    font-weight: 400px;
+    text-decoration: none;
+    font-family: Roboto;
+    color: var(--color1);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+a{
+    cursor: pointer;
+}
+
+.nav-sidebar ul li a:hover{
+    
+    background-color: var(--color5);
+    color: var(--color4);
+}
+
